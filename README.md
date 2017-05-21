@@ -1,1 +1,1 @@
-Memory mind for Android
+Memory mind
