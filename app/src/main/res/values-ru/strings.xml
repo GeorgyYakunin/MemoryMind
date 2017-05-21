@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="priorities">
+        <item>Низкий приоритет</item>
+        <item>Обычный приоритет</item>
+        <item>Высокий приоритет</item>
+    </string-array>
+    <string name="app_name">Memory Mind</string>
+    <string name="action_settings">Настройки</string>
+    <string name="current_task">Текущие</string>
+    <string name="dialog_cancel">Отмена</string>
+    <string name="dialog_editing_title">Редактирование задачи</string>
+    <string name="dialog_error_empty_title">Пожалуйста, введите заголовок.</string>
+    <string name="dialog_removing_message">Вы уверены, что хотите удалить эту задачу?</string>
+    <string name="dialog_title">Добавление задачи</string>
+    <string name="do_not_show_splash">Не показывать начальный экран</string>
+    <string name="done_task">Выполненные</string>
+    <string name="hello_blank_fragment"></string>
+    <string name="removed">Удалено</string>
+    <string name="separator_future">В будущем</string>
+    <string name="separator_overdue">В прошлом</string>
+    <string name="separator_today">Сегодня</string>
+    <string name="separator_tomorrow">Завтра</string>
+    <string name="task_date">Дата</string>
+    <string name="task_time">Время</string>
+    <string name="task_title">Заголовок</string>
+</resources>
