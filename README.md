@@ -1,1 +1,1 @@
-Reminder App for Android
+Memory mind for Android
