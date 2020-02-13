@@ -8,9 +8,7 @@ import com.google.memorymind.model.ModelTask;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Sergey on 12.12.2015.
- */
+
 public class DBQueryManager {
 
     private SQLiteDatabase database;

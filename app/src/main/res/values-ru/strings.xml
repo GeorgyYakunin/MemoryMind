@@ -15,7 +15,6 @@
     <string name="dialog_title">Добавление задачи</string>
     <string name="do_not_show_splash">Не показывать начальный экран</string>
     <string name="done_task">Выполненные</string>
-    <string name="hello_blank_fragment"></string>
     <string name="removed">Удалено</string>
     <string name="separator_future">В будущем</string>
     <string name="separator_overdue">В прошлом</string>

@@ -14,32 +14,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="72dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="74dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
             android:layout_toLeftOf="@+id/tvTaskDate"
             android:layout_toRightOf="@+id/tvTaskDate"
             android:layout_toStartOf="@+id/tvTaskDate"
             android:textColor="@color/primary_text_default_material_light"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/tvTaskDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_margin="16dp"
+            android:layout_margin="18dp"
             android:gravity="right"
             android:textColor="@color/secondary_text_default_material_light"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/cvTaskPriority"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
             android:src="@color/colorPrimary" />
     </RelativeLayout>
 

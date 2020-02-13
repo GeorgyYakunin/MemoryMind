@@ -5,7 +5,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.res.Resources;
 import android.os.Handler;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,9 +22,7 @@ import java.util.Calendar;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-/**
- * Created by Sergey on 06.12.2015.
- */
+
 public class CurrentTaskAdapter extends TaskAdapter {
 
     private final static int TYPE_TASK = 0;
@@ -40,7 +38,7 @@ public class CurrentTaskAdapter extends TaskAdapter {
         switch (viewType){
             case TYPE_TASK:
                 View v = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.model_task, parent, false);
+                        .inflate(R.layout.m_task, parent, false);
                 TextView title = (TextView) v.findViewById(R.id.tvTaskTitle);
                 TextView date = (TextView) v.findViewById(R.id.tvTaskDate);
                 CircleImageView priority = (CircleImageView) v.findViewById(R.id.cvTaskPriority);
@@ -48,7 +46,7 @@ public class CurrentTaskAdapter extends TaskAdapter {
                 return new TaskViewHolder(v, title, date, priority);
             case TYPE_SEPARATOR:
                 View separator = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.model_separator, parent, false);
+                        .inflate(R.layout.m_separator, parent, false);
                 TextView type = (TextView) separator.findViewById(R.id.tvSeparatorName);
                 return new SeparatorViewHolder(separator, type);
             default:
@@ -117,7 +115,7 @@ public class CurrentTaskAdapter extends TaskAdapter {
                 public void onClick(View v) {
                     taskViewHolder.priority.setEnabled(false);
                     task.setStatus(ModelTask.STATUS_DONE);
-                    getTaskFragment().mainActivity.dbHelper.update().status(task.getTimeStamp(), ModelTask.STATUS_DONE);
+                    getTaskFragment().activityMain.dbHelper.update().status(task.getTimeStamp(), ModelTask.STATUS_DONE);
 
                     taskViewHolder.title.setTextColor(resources.getColor(R.color.primary_text_disabled_material_light));
                     taskViewHolder.date.setTextColor(resources.getColor(R.color.secondary_text_disabled_material_light));

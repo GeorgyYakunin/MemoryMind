@@ -5,9 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.google.memorymind.model.ModelTask;
 
-/**
- * Created by Sergey on 12.12.2015.
- */
+
 public class DBUpdateManager {
 
     SQLiteDatabase database;

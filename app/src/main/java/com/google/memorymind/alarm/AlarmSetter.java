@@ -10,9 +10,7 @@ import com.google.memorymind.model.ModelTask;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Sergey on 17.12.2015.
- */
+
 public class AlarmSetter extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {

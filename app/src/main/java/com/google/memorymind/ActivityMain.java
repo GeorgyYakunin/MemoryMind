@@ -3,15 +3,15 @@ package com.google.memorymind;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.os.PersistableBundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
@@ -26,7 +26,7 @@ import com.google.memorymind.model.ModelTask;
 import com.google.memorymind.fragment.CurrentTaskFragment;
 import com.google.memorymind.fragment.SplashFragment;
 
-public class MainActivity extends AppCompatActivity
+public class ActivityMain extends AppCompatActivity
         implements AddingTaskDialogFragment.AddingTaskListener,
         CurrentTaskFragment.OnTaskDoneListener, DoneTaskFragment.OnTaskRestoreListener,
         EditTaskDialogFragment.EditingTaskListener {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_act);
 
         PreferenceHelper.getInstance().init(getApplicationContext());
         preferenceHelper = PreferenceHelper.getInstance();

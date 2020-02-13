@@ -4,8 +4,8 @@ package com.google.memorymind.fragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +54,7 @@ public class CurrentTaskFragment extends TaskFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_current_task, container, false);
+        View rootView = inflater.inflate(R.layout.current_task_frag, container, false);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.rvCurrentTasks);
 
@@ -65,7 +65,6 @@ public class CurrentTaskFragment extends TaskFragment {
         adapter = new CurrentTaskAdapter(this);
         recyclerView.setAdapter(adapter);
 
-        // Inflate the layout for this fragment
         return rootView;
     }
 
@@ -74,7 +73,7 @@ public class CurrentTaskFragment extends TaskFragment {
     public void findTasks(String title) {
         adapter.removeAllItems();
         List<ModelTask> tasks = new ArrayList<>();
-        tasks.addAll(mainActivity.dbHelper.query().getTasks(DBHelper.SELECTION_LIKE_TITLE + " AND "
+        tasks.addAll(activityMain.dbHelper.query().getTasks(DBHelper.SELECTION_LIKE_TITLE + " AND "
                         + DBHelper.SELECTION_STATUS + " OR " + DBHelper.SELECTION_STATUS,
                 new String[]{"%" + title + "%", Integer.toString(ModelTask.STATUS_CURRENT),
                         Integer.toString(ModelTask.STATUS_OVERDUE)}, DBHelper.TASK_DATE_COLUMN));
@@ -87,7 +86,7 @@ public class CurrentTaskFragment extends TaskFragment {
     public void addTaskFromDB() {
         adapter.removeAllItems();
         List<ModelTask> tasks = new ArrayList<>();
-        tasks.addAll(mainActivity.dbHelper.query().getTasks(DBHelper.SELECTION_STATUS + " OR "
+        tasks.addAll(activityMain.dbHelper.query().getTasks(DBHelper.SELECTION_STATUS + " OR "
                 + DBHelper.SELECTION_STATUS, new String[]{Integer.toString(ModelTask.STATUS_CURRENT),
                 Integer.toString(ModelTask.STATUS_OVERDUE)}, DBHelper.TASK_DATE_COLUMN));
         for (int i = 0; i < tasks.size(); i++) {
@@ -182,7 +181,7 @@ public class CurrentTaskFragment extends TaskFragment {
         }
 
         if (saveToDB) {
-            mainActivity.dbHelper.saveTask(newTask);
+            activityMain.dbHelper.saveTask(newTask);
         }
     }
 

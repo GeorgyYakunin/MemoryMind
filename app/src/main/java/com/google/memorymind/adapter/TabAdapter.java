@@ -2,14 +2,12 @@ package com.google.memorymind.adapter;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v13.app.FragmentStatePagerAdapter;
+import androidx.legacy.app.FragmentStatePagerAdapter;
 
 import com.google.memorymind.fragment.CurrentTaskFragment;
 import com.google.memorymind.fragment.DoneTaskFragment;
 
-/**
- * Created by Sergey on 14.11.2015.
- */
+
 public class TabAdapter extends FragmentStatePagerAdapter{
 
     private int numberOfTabs;

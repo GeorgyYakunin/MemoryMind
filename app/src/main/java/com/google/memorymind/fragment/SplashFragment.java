@@ -32,7 +32,7 @@ public class SplashFragment extends Fragment {
         SplashTask splashTask = new SplashTask();
         splashTask.execute();
 
-        return inflater.inflate(R.layout.fragment_splash, container, false);
+        return inflater.inflate(R.layout.splash_frag, container, false);
     }
 
     class SplashTask extends AsyncTask<Void, Void, Void> {

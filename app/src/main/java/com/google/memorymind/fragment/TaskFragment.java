@@ -5,28 +5,26 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.RecyclerView;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.google.memorymind.dialog.EditTaskDialogFragment;
 import com.google.memorymind.model.Item;
 import com.google.memorymind.model.ModelTask;
-import com.google.memorymind.MainActivity;
+import com.google.memorymind.ActivityMain;
 import com.google.memorymind.R;
 import com.google.memorymind.adapter.TaskAdapter;
 import com.google.memorymind.alarm.AlarmHelper;
 
-/**
- * Created by Sergey on 08.12.2015.
- */
+
 public abstract class TaskFragment extends Fragment {
     protected RecyclerView recyclerView;
     protected RecyclerView.LayoutManager layoutManager;
 
     protected TaskAdapter adapter;
 
-    public MainActivity mainActivity;
+    public ActivityMain activityMain;
 
     public AlarmHelper alarmHelper;
 
@@ -36,7 +34,7 @@ public abstract class TaskFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         if (getActivity() != null) {
-            mainActivity = (MainActivity) getActivity();
+            activityMain = (ActivityMain) getActivity();
         }
 
         alarmHelper = AlarmHelper.getInstance();
@@ -76,7 +74,7 @@ public abstract class TaskFragment extends Fragment {
                     snackbar.setAction(R.string.dialog_cancel, new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            addTask(mainActivity.dbHelper.query().getTask(timeStamp), false);
+                            addTask(activityMain.dbHelper.query().getTask(timeStamp), false);
                             isRemoved[0] = false;
                         }
                     });
@@ -90,7 +88,7 @@ public abstract class TaskFragment extends Fragment {
                         public void onViewDetachedFromWindow(View v) {
                             if (isRemoved[0]) {
                                 alarmHelper.removeAlarm(timeStamp);
-                                mainActivity.dbHelper.removeTask(timeStamp);
+                                activityMain.dbHelper.removeTask(timeStamp);
 
                             }
                         }

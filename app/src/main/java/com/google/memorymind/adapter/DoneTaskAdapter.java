@@ -5,7 +5,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.res.Resources;
 import android.os.Handler;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,9 +19,7 @@ import com.google.memorymind.Utils;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-/**
- * Created by Sergey on 09.12.2015.
- */
+
 public class DoneTaskAdapter extends TaskAdapter {
 
     public DoneTaskAdapter(DoneTaskFragment taskFragment) {
@@ -31,7 +29,7 @@ public class DoneTaskAdapter extends TaskAdapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.model_task, parent, false);
+                .inflate(R.layout.m_task, parent, false);
         TextView title = (TextView) v.findViewById(R.id.tvTaskTitle);
         TextView date = (TextView) v.findViewById(R.id.tvTaskDate);
         CircleImageView priority = (CircleImageView) v.findViewById(R.id.cvTaskPriority);
@@ -87,7 +85,7 @@ public class DoneTaskAdapter extends TaskAdapter {
                 public void onClick(View v) {
                     taskViewHolder.priority.setEnabled(false);
                     task.setStatus(ModelTask.STATUS_CURRENT);
-                    getTaskFragment().mainActivity.dbHelper.update().status(task.getTimeStamp(), ModelTask.STATUS_CURRENT);
+                    getTaskFragment().activityMain.dbHelper.update().status(task.getTimeStamp(), ModelTask.STATUS_CURRENT);
 
                     taskViewHolder.title.setTextColor(resources.getColor(R.color.primary_text_default_material_light));
                     taskViewHolder.date.setTextColor(resources.getColor(R.color.secondary_text_default_material_light));

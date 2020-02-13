@@ -4,9 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 
-/**
- * Created by Sergey on 07.11.2015.
- */
+
 public class PreferenceHelper {
 
     public static final String SPLASH_IS_INVISIBLE = "splash_is_invisible";

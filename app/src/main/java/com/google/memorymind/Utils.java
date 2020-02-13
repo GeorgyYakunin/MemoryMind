@@ -2,9 +2,7 @@ package com.google.memorymind;
 
 import java.text.SimpleDateFormat;
 
-/**
- * Created by Sergey on 01.12.2015.
- */
+
 public class Utils {
 
     public static String getDate(long date) {

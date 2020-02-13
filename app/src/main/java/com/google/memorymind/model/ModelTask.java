@@ -4,9 +4,7 @@ import com.google.memorymind.R;
 
 import java.util.Date;
 
-/**
- * Created by Sergey on 06.12.2015.
- */
+
 public class ModelTask implements Item {
 
     public static final int PRIORITY_LOW = 0;

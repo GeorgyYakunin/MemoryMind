@@ -2,9 +2,7 @@ package com.google.memorymind;
 
 import android.app.Application;
 
-/**
- * Created by Sergey on 13.12.2015.
- */
+
 public class MyApplication extends Application {
 
     private static boolean activityVisible;

@@ -7,9 +7,7 @@ import android.content.Intent;
 
 import com.google.memorymind.model.ModelTask;
 
-/**
- * Created by Sergey on 17.12.2015.
- */
+
 public class AlarmHelper {
 
     private static AlarmHelper instance;
